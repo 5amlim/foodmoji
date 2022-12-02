@@ -12,11 +12,10 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar user={user} setUser={setUser}/>
       {
         user?
         <>
-          
+          <NavBar user={user} setUser={setUser}/>
           <Routes>
             <Route path="/orders/new" element={<NewOrderPage />} />
             <Route path="/orders" element={<OrderHistoryPage />} />
