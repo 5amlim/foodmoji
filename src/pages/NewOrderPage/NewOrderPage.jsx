@@ -1,7 +1,17 @@
-export default function NewOrderPage () {
+import { Fragment } from "react"
+
+export default function NewOrderPage ({items}) {
+    const itemList = items.map((item) => {
+        return (
+            <Fragment key={item.id}>
+            <p >{item.title}</p>
+            <p >${item.price}</p>
+            </ Fragment>
+        )
+    })
     return(
         <>
-        <h1>New Order Page</h1>
+        {itemList}
         </>
     )
 }
