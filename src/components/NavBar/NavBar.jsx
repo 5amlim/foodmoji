@@ -22,7 +22,7 @@ export default function NavBar ({user, setUser}) {
               src="/stylesheets/images/fmlogo.png"
               width="30"
               height="30"
-              className="d-inline-block align-top"
+              className="d-inline-block align-top rounded-circle"
             />{' '}
             FOODMoji
           </Navbar.Brand>
