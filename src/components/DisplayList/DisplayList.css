@@ -1,0 +1,14 @@
+.DisplayList {
+    color: var(--text-light);
+    list-style: none;
+    padding: 0;
+    font-size: 1.7vw;
+    margin-top: 2px
+  }
+  
+  .DisplayList li {
+    padding: .6vmin;
+    text-align: center;
+    border-radius: .5vmin;
+    margin-bottom: .5vmin;
+  }

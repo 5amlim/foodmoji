@@ -1,15 +1,17 @@
 .DisplayListItem {
-    width: 100%;
-    display: flex;
+    width: 80%;
+    display:inline-flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3vmin;
+    margin-bottom: 1vmin;
     padding: 2vmin;
     color: var(--text-light);
     background-color: var(--white);
     border: .1vmin solid var(--tan-3);
     border-radius: 1vmin;
     font-size: 4vmin;
+    
+
   }
   
   .DisplayListItem .image {
@@ -27,15 +29,26 @@
   }
   
   .DisplayListItem .buy span {
-    font-size: 1.7vw;
+    font-size: 1vw;
     text-align: center;
     color: var(--text-light);
   }
   
   .DisplayListItem .name {
-    font-size: 2vw;
-    text-align: center;
+    font-size: 1.3vw;
     color: var(--text-light);
+    align-items: center;
+    overflow-y:hidden;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    max-width: 70%;
   }
   
+  .DisplayListItem .align-rt {
+    padding: 0vw 0vw 0vw 0vw;
+    font-size: 1.3vw;
+    color: var(--text-light);
+    text-align: right;
+    white-space: nowrap;
+  }
   

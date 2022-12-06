@@ -5,9 +5,9 @@ import ('./OrderDetails.css')
 export default function OrderDetails({ order }) {
   if (!order) return null;
 
-  const cartItems = order.cartItems.map(item =>{
+  const cartItems = order.cartItems.map((item, i) =>{
       return(
-          <CartItem cartItem={item} isPaid={order.isPaid} key={item._id} />
+          <CartItem cartItem={item} isPaid={order.isPaid} key={item._id} i={i}/>
       )
   }
   );
@@ -23,7 +23,7 @@ export default function OrderDetails({ order }) {
         <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
       </div>
       <div className="line-item-container flex-ctr-ctr flex-col scroll-y">
-        {cartItems.length ?
+        {cartItems.length?
           <>
             {cartItems}
             <section className="total">

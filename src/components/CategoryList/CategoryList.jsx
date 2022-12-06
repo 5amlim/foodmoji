@@ -12,7 +12,7 @@ export default function CategoryList({ categories, activeCategory, setActiveCate
   );
   return (
     <ul className="CategoryList">
-        <h2>Category</h2>
+        <h2 className="align-ctr">Category</h2>
         {categoryCard}
     </ul>
   );

@@ -1,11 +1,11 @@
 import './CartItem.css';
 
-export default function CartItem({ cartItem, isPaid }) {
+export default function CartItem({ cartItem, isPaid, i}) {
   return (
     <div className="cartItem">
-      <div className="flex-ctr-ctr">{cartItem.item.emoji}</div>
+      <div className="flex-ctr-ctr">{i+1}</div>
       <div className="flex-ctr-ctr flex-col">
-        <span className="align-ctr">{cartItem.item.name}</span>
+        <span className="align-ctr">{cartItem.item.title}</span>
         <span>{cartItem.item.price.toFixed(2)}</span>
       </div>
       <div className="qty" style={{ justifyContent: isPaid && 'center' }}>

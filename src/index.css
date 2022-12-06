@@ -19,7 +19,7 @@ code {
   --tan-2: #E7E2DD;
   --tan-3: #E2D9D1;
   --tan-4: #D3C1AE;
-  --orange: #b77c22;
+  --orange: #533f22;
   --text-light: #968c84;
   --text-dark: #615954;
 }
@@ -147,7 +147,7 @@ button, a.button {
 }
 
 button.btn-sm {
-  font-size: 1.5vmin;
+  font-size: 1vmin;
   padding: .6vmin .8vmin;
 }
 

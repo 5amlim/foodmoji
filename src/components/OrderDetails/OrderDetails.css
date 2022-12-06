@@ -2,7 +2,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 3vmin;
+    padding: 3vmin 1vmin;
     font-size: 2vmin;
     color: var(--text-light);
   }

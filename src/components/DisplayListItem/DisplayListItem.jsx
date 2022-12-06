@@ -1,7 +1,7 @@
 import * as ordersAPI from '../../utilities/orders-api'
 import ('./DisplayListItem.css')
 
-export default function DisplayListItem ({item, setCart }) {
+export default function DisplayListItem ({item, setCart, setActiveItem}) {
     
     const handleAddToOrder = async function () {
         const cart = await ordersAPI.addItemToCart(item._id)
@@ -9,13 +9,13 @@ export default function DisplayListItem ({item, setCart }) {
           }
     
     return (
-        <div className="DisplayListItem">
-        <img className="image" src={item.image}></img>
-        <div className="name">{item.title}</div>
-        <div className="buy">
-          <span>${item.price.toFixed(2)}</span>
-          <button className="btn-sm" onClick={handleAddToOrder}>ADD</button>
-        </div>
-      </div>
+        <li onMouseEnter={()=>setActiveItem(item)} onMouseLeave={()=>setActiveItem('')} className="DisplayListItem" >
+        {/* <img className="image" src={item.image}></img> */}
+        <span className="name">{item.title}</span>
+
+        <span className="align-rt">${item.price.toFixed(2)}    
+        <button className="btn-sm" onClick={handleAddToOrder}>ADD</button>
+        </span>
+        </li>
     )
 }
