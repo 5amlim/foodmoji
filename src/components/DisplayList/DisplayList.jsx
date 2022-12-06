@@ -2,10 +2,10 @@ import './DisplayList.css'
 
 import DisplayListItem from "../DisplayListItem/DisplayListItem";
 
-export default function DisplayList ({ displayItems, setCart, setActiveItem }) {
+export default function DisplayList ({ displayItems, setCart, setActiveItem, activeItem }) {
     const items = displayItems.map(item => { 
         return (
-            <DisplayListItem setActiveItem={setActiveItem} key={item._id} item={item} setCart={setCart}/>
+            <DisplayListItem activeItem={activeItem} setActiveItem={setActiveItem} key={item._id} item={item} setCart={setCart}/>
         )
     }
       );

@@ -44,7 +44,7 @@ export default function NewOrderPage () {
         
         <div className="ProductDetails">
             <div className="section-heading"><span>Products</span>Price</div>
-            <DisplayList setActiveItem={setActiveItem} displayItems={displayItems.filter(item => item.category.name === activeCategory)} setCart={setCart} />
+            <DisplayList setActiveItem={setActiveItem} activeItem={activeItem} displayItems={displayItems.filter(item => item.category.name === activeCategory)} setCart={setCart} />
         </div>
         <OrderDetails order={cart} />
         </main>

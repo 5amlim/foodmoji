@@ -51,4 +51,21 @@
     text-align: right;
     white-space: nowrap;
   }
+
+
+  .DisplayCard {
+  padding: 0px;
+  }
+
+  .DisplayCard li:hover:not(.active) {
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--white);
+  }
+  
+  .DisplayCard li.active {
+    color: var(--text-dark);
+    background-color: var(--tan-1);
+    border: .1vmin solid var(--tan-3);
+  }
   
