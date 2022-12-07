@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef,} from "react"
 import * as itemsAPI from "../../utilities/items-api"
+import * as ordersAPI from "../../utilities/orders-api"
 import CategoryList from "../../components/CategoryList/CategoryList";
 import DisplayList from "../../components/DisplayList/DisplayList";
 import OrderDetails from "../../components/OrderDetails/OrderDetails";
 import OrderHistoryButton from "../../components/OrderHistoryButton/OrderHistoryButton";
 import ItemDetails from "../../components/ItemDetails/ItemDetails";
+import { Link, useNavigate } from 'react-router-dom';
 
 
 import ('./NewOrderPage.css')
@@ -14,6 +16,7 @@ export default function NewOrderPage () {
     const [activeCategory, setActiveCategory] = useState('');
     const [activeItem, setActiveItem] = useState('')
     const [cart, setCart] = useState(null)
+    const navigate = useNavigate();
 
     const categoriesRef = useRef([])
     
@@ -28,6 +31,16 @@ export default function NewOrderPage () {
         getItems()
         console.log('⛑️', displayItems)
       }, []);
+
+      async function handleChangeQty(itemId, newQty) {
+        const updatedCart = await ordersAPI.setItemQtyInCart(itemId, newQty);
+        setCart(updatedCart);
+      }
+
+      async function handleCheckout() {
+        await ordersAPI.checkout();
+        navigate('/orders');
+      }
 
     return(
         <>
@@ -46,7 +59,7 @@ export default function NewOrderPage () {
             <div className="section-heading"><span>Products</span>Price</div>
             <DisplayList setActiveItem={setActiveItem} activeItem={activeItem} displayItems={displayItems.filter(item => item.category.name === activeCategory)} setCart={setCart} />
         </div>
-        <OrderDetails order={cart} />
+        <OrderDetails order={cart} handleChangeQty={handleChangeQty} handleCheckout={handleCheckout} />
         </main>
         </>
     )

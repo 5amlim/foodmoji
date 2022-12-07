@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const ordersCtrl = require('../../controllers/api/orders');
 
+router.get('/', ordersCtrl.index)
 // GET /api/orders/cart
 router.get('/cart', ordersCtrl.cart);
 // POST /api/orders/cart/items/:id

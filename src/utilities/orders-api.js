@@ -25,3 +25,7 @@ export function checkout() {
   // Changing data on the server, so make it a POST request
   return sendRequest(`${BASE_URL}/cart/checkout`, 'POST');
 }
+
+export function getOrders() {
+    return sendRequest(BASE_URL);
+}

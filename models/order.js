@@ -60,4 +60,16 @@ orderSchema.statics.getCart = function(userId) {
         return cart.save();
     };
 
+
+orderSchema.methods.setItemQty = function(itemId, newQty) {
+    const cart = this;
+    const cartItem = cart.cartItems.find(cartItem => cartItem.item._id.equals(itemId));
+    if (cartItem && newQty <= 0) {
+      cartItem.remove();
+    } else if (cartItem) {
+      cartItem.qty = newQty;
+    }
+    return cart.save();
+  };
+  
     module.exports = mongoose.model('Order', orderSchema);
