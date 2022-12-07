@@ -38,19 +38,18 @@ const orderSchema = new Schema({
   });
 
 
-orderSchema.statics.getCart = function(userId) {
-
-    return this.findOneAndUpdate(
-      { user: userId, isPaid: false },
-      { user: userId },
-      { upsert: true, new: true }
-    );
-  };
+    orderSchema.statics.getCart = function(userId) {
+        return this.findOneAndUpdate(
+        { user: userId, isPaid: false },
+        { user: userId },
+        { upsert: true, new: true }
+        );
+    };
   
-  orderSchema.methods.addItemToCart = async function (itemId) {
-      const cart = this;
-      const cartItem = cart.cartItems.find(cartItem => cartItem.item._id.equals(itemId));
-      if (cartItem) {
+    orderSchema.methods.addItemToCart = async function (itemId) {
+        const cart = this;
+        const cartItem = cart.cartItems.find(cartItem => cartItem.item._id.equals(itemId));
+        if (cartItem) {
           cartItem.qty += 1;
         } else {
             const item = await mongoose.model('Item').findById(itemId);
@@ -61,15 +60,15 @@ orderSchema.statics.getCart = function(userId) {
     };
 
 
-orderSchema.methods.setItemQty = function(itemId, newQty) {
-    const cart = this;
-    const cartItem = cart.cartItems.find(cartItem => cartItem.item._id.equals(itemId));
-    if (cartItem && newQty <= 0) {
-      cartItem.remove();
-    } else if (cartItem) {
-      cartItem.qty = newQty;
-    }
-    return cart.save();
-  };
-  
-    module.exports = mongoose.model('Order', orderSchema);
+    orderSchema.methods.setItemQty = function(itemId, newQty) {
+        const cart = this;
+        const cartItem = cart.cartItems.find(cartItem => cartItem.item._id.equals(itemId));
+        if (cartItem && newQty <= 0) {
+        cartItem.remove();
+        } else if (cartItem) {
+        cartItem.qty = newQty;
+        }
+        return cart.save();
+    };
+
+module.exports = mongoose.model('Order', orderSchema);

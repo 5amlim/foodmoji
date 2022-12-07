@@ -30,7 +30,8 @@ export default function NavBar ({user, setUser}) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/orders/new">New Order</Nav.Link>
+            <Nav.Link href="/">New Order</Nav.Link>
+            <Nav.Link href="/cart">My Cart</Nav.Link>
 
           </Nav>
           <Nav>

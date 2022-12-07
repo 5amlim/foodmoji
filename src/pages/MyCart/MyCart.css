@@ -1,0 +1,14 @@
+.OrderDetails {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vmin 1vmin;
+    font-size: 2vmin;
+    color: var(--text-light);
+    width: 35%;
+    margin: 0 auto;
+}
+
+.ctr {
+    text-align: center;
+}

@@ -1,22 +1,20 @@
 import { useState, useEffect, useRef,} from "react"
 import * as itemsAPI from "../../utilities/items-api"
-import * as ordersAPI from "../../utilities/orders-api"
 import CategoryList from "../../components/CategoryList/CategoryList";
 import DisplayList from "../../components/DisplayList/DisplayList";
 import OrderDetails from "../../components/OrderDetails/OrderDetails";
 import OrderHistoryButton from "../../components/OrderHistoryButton/OrderHistoryButton";
 import ItemDetails from "../../components/ItemDetails/ItemDetails";
-import { useNavigate } from 'react-router-dom';
+
 
 
 import ('./NewOrderPage.css')
 
-export default function NewOrderPage () {
+export default function NewOrderPage ({cart, setCart, handleCheckout, handleChangeQty}) {
     const [displayItems, setDisplayItems] = useState([]);
     const [activeCategory, setActiveCategory] = useState('');
     const [activeItem, setActiveItem] = useState('')
-    const [cart, setCart] = useState(null)
-    const navigate = useNavigate();
+
 
     const categoriesRef = useRef([])
     
@@ -24,22 +22,12 @@ export default function NewOrderPage () {
         async function getItems() {
             const items = await itemsAPI.getAll();
             categoriesRef.current = [...new Set(items.map((item) => item.category.name))]
-
             setDisplayItems(items);
             setActiveCategory(categoriesRef.current[0]);
         }
         getItems()
       }, []);
 
-      async function handleChangeQty(itemId, newQty) {
-        const updatedCart = await ordersAPI.setItemQtyInCart(itemId, newQty);
-        setCart(updatedCart);
-      }
-
-      async function handleCheckout() {
-        await ordersAPI.checkout();
-        navigate('/orders');
-      }
 
     return(
         <>

@@ -4,7 +4,8 @@ import * as ordersAPI from "../../utilities/orders-api"
 
 export default function OrderHistoryPage () {
     const [previousOrders, setPreviousOrders] = useState([])
-   useEffect(function() {
+    
+    useEffect(function() {
     async function getOrders() {
         const orders = await ordersAPI.getOrders();
         setPreviousOrders(orders)

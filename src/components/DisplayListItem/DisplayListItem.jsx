@@ -14,7 +14,8 @@ return (
         <li className={item === activeItem ? 'active DisplayListItem' : 'DisplayListItem'} onClick={()=>setActiveItem(item)}  >
         {/* <img className="image" src={item.image}></img> */}
         <span className="name">{item.title}</span>
-        <span className="align-rt">${item.price.toFixed(2)}    
+        <span className="align-rt">${item.price.toFixed(2)}   
+        &nbsp; &nbsp; &nbsp;
         <button className="btn-sm" onClick={handleAddToOrder}>ADD</button>
         </span>
         </li>
