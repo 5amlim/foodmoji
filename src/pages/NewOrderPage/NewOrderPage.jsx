@@ -6,7 +6,7 @@ import DisplayList from "../../components/DisplayList/DisplayList";
 import OrderDetails from "../../components/OrderDetails/OrderDetails";
 import OrderHistoryButton from "../../components/OrderHistoryButton/OrderHistoryButton";
 import ItemDetails from "../../components/ItemDetails/ItemDetails";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 import ('./NewOrderPage.css')
@@ -29,7 +29,6 @@ export default function NewOrderPage () {
             setActiveCategory(categoriesRef.current[0]);
         }
         getItems()
-        console.log('⛑️', displayItems)
       }, []);
 
       async function handleChangeQty(itemId, newQty) {
