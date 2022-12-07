@@ -5,7 +5,7 @@ export default function PreviousOrderCard ({previousOrders}) {
         const cartItem = order.cartItems.map(item=>{
             return (
                 <div key={item.item.title}>
-                <p>{item.item.title} x {item.qty} = ${item.extPrice}</p>
+                <p>{item.item.title} x {item.qty} = ${(item.extPrice).toFixed(2)}</p>
                 </div>
                 )
         }
