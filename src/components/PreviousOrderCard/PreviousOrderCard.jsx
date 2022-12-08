@@ -1,5 +1,6 @@
 import Card from 'react-bootstrap/Card';
 
+
 export default function PreviousOrderCard ({previousOrders}) {
     const Orders = previousOrders.map( order => {
         const cartItem = order.cartItems.map(item=>{
@@ -12,7 +13,7 @@ export default function PreviousOrderCard ({previousOrders}) {
             )
         return(
             <div key={order.orderId}>
-                <Card className="text-center" >
+                <Card  className="text-center" >
                     <Card.Header>Order ID: {order.orderId} (Order Date: {(order.updatedAt).substring(0, 10)})</Card.Header>
                     <Card.Body>
                     <Card.Title>Order Details</Card.Title>
