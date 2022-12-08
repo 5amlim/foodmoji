@@ -38,7 +38,7 @@ export default function NewOrderPage ({cart, setCart, handleCheckout, handleChan
         <ItemDetails activeItem={activeItem} />
         <div>
             <OrderHistoryButton />
-            <p>Happy Shopping!</p>
+            <p className="ctr">Happy Shopping!</p>
         </div>
         </aside>
         

@@ -1,11 +1,12 @@
-import './OrderHistoryButton.css'
 import { useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 export default function OrderHistoryButton () {
     const navigate = useNavigate();
     return (
         <div className="order-history">
-        <button className="btn-sm"onClick={() => navigate('/orders') }> My Previous Orders </ button>
+            <br></br>
+        <Button variant="dark" onClick={() => navigate('/orders') }> My Previous Orders </ Button>
         </div>
     )
 }

@@ -42,7 +42,6 @@ function App() {
           <NavBar user={user} setUser={setUser}/>
           <Routes>
             <Route path="/" element={<NewOrderPage cart={cart} setCart={setCart} handleChangeQty={handleChangeQty} handleCheckout={handleCheckout} />} />
-            {/* <Route path="/orders/new" element={<NewOrderPage setCart={setCart} handleChangeQty={handleChangeQty} handleCheckout={handleCheckout} />} /> */}
             <Route path="/cart" element={<MyCart cart={cart} handleChangeQty={handleChangeQty} handleCheckout={handleCheckout}/>} />
             <Route path="/orders" element={<OrderHistoryPage user={user}/>} />
           </Routes>

@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Card from 'react-bootstrap/Card';
 
 
@@ -6,7 +7,7 @@ export default function PreviousOrderCard ({previousOrders}) {
         const cartItem = order.cartItems.map(item=>{
             return (
                 <div key={item.item.title}>
-                <p>{item.item.title} x {item.qty} = ${(item.extPrice).toFixed(2)}</p>
+                <p >{item.item.title} x {item.qty} = ${(item.extPrice).toFixed(2)}</p>
                 </div>
                 )
         }
@@ -17,7 +18,7 @@ export default function PreviousOrderCard ({previousOrders}) {
                     <Card.Header>Order ID: {order.orderId} (Order Date: {(order.updatedAt).substring(0, 10)})</Card.Header>
                     <Card.Body>
                     <Card.Title>Order Details</Card.Title>
-                    <Card.Text>
+                    <Card.Text as='div'>
                         {cartItem}
                     </Card.Text>
                     </Card.Body>
