@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/foodmoji/static/css/main.987ff028.css",
+    "main.js": "/foodmoji/static/js/main.f5a9ae11.js",
+    "static/css/350.545119b1.chunk.css": "/foodmoji/static/css/350.545119b1.chunk.css",
+    "static/js/350.576ac9dc.chunk.js": "/foodmoji/static/js/350.576ac9dc.chunk.js",
+    "static/css/244.892cff07.chunk.css": "/foodmoji/static/css/244.892cff07.chunk.css",
+    "static/js/244.f93c9544.chunk.js": "/foodmoji/static/js/244.f93c9544.chunk.js",
+    "static/css/866.98c3106a.chunk.css": "/foodmoji/static/css/866.98c3106a.chunk.css",
+    "static/js/866.487398bd.chunk.js": "/foodmoji/static/js/866.487398bd.chunk.js",
+    "static/css/971.63d0ec74.chunk.css": "/foodmoji/static/css/971.63d0ec74.chunk.css",
+    "static/js/971.1aaf9f02.chunk.js": "/foodmoji/static/js/971.1aaf9f02.chunk.js",
+    "static/css/743.a2b69460.chunk.css": "/foodmoji/static/css/743.a2b69460.chunk.css",
+    "static/js/743.5a522400.chunk.js": "/foodmoji/static/js/743.5a522400.chunk.js",
+    "index.html": "/foodmoji/index.html",
+    "main.987ff028.css.map": "/foodmoji/static/css/main.987ff028.css.map",
+    "main.f5a9ae11.js.map": "/foodmoji/static/js/main.f5a9ae11.js.map",
+    "350.545119b1.chunk.css.map": "/foodmoji/static/css/350.545119b1.chunk.css.map",
+    "350.576ac9dc.chunk.js.map": "/foodmoji/static/js/350.576ac9dc.chunk.js.map",
+    "244.892cff07.chunk.css.map": "/foodmoji/static/css/244.892cff07.chunk.css.map",
+    "244.f93c9544.chunk.js.map": "/foodmoji/static/js/244.f93c9544.chunk.js.map",
+    "866.98c3106a.chunk.css.map": "/foodmoji/static/css/866.98c3106a.chunk.css.map",
+    "866.487398bd.chunk.js.map": "/foodmoji/static/js/866.487398bd.chunk.js.map",
+    "971.63d0ec74.chunk.css.map": "/foodmoji/static/css/971.63d0ec74.chunk.css.map",
+    "971.1aaf9f02.chunk.js.map": "/foodmoji/static/js/971.1aaf9f02.chunk.js.map",
+    "743.a2b69460.chunk.css.map": "/foodmoji/static/css/743.a2b69460.chunk.css.map",
+    "743.5a522400.chunk.js.map": "/foodmoji/static/js/743.5a522400.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.987ff028.css",
+    "static/js/main.f5a9ae11.js"
+  ]
+}
