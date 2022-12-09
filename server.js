@@ -3,14 +3,17 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 const ensureLoggedIn = require('./config/ensureLoggedIn');
+const cors = require('cors')
 
 require('dotenv').config();
 require('./config/database');
+
 
 const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
+app.use(cors());
 
 
 // Configure both serve-favicon & static middleware
