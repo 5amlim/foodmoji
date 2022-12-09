@@ -30,7 +30,7 @@ A MERN-stack single-page application (SPA) grocery shopping website
 
 ## WIREFRAMES
 
-#### Browse Page
+#### New Order Page
 
 ![Browse Page](/public/stylesheets/images/browsepage.png)
 
@@ -41,6 +41,20 @@ A MERN-stack single-page application (SPA) grocery shopping website
 #### My Orders Page
 
 ![My Orders](/public/stylesheets/images/myorders.png)
+
+## SCREENSHOTS
+
+#### New Order Page
+
+![Browse Page](/public/stylesheets/images/neworder.png)
+
+#### Shopping Cart Page
+
+![Shopping Cart](/public/stylesheets/images/cart.png)
+
+#### My Orders Page
+
+![My Orders](/public/stylesheets/images/previousorder.png)
 
 ## Future Implementations
 

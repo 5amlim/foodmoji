@@ -1,7 +1,7 @@
 import CartItem from '../CartItem/CartItem';
 import ('./OrderDetails.css')
 
-// Used to display the details of any order, including the cart (unpaid order)
+
 export default function OrderDetails({ order, handleChangeQty, handleCheckout}) {
   if (!order) return null;
 
