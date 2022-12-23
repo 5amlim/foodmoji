@@ -29,7 +29,6 @@ app.use(express.static(path.join(__dirname, 'build')));
 //   console.log(`Express app running on port ${port}`)
 // });
 
-module.export = app
 
 app.use(express.static(path.join(__dirname, 'build')));
 app.use(require('./config/checkToken'))
@@ -43,3 +42,5 @@ app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders'));
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+
+module.exports = app
