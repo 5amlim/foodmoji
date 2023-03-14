@@ -13,7 +13,7 @@ const Item = require('./models/item');
     {name: 'Frozen', sortOrder: 30},
     {name: 'Dairy', sortOrder: 40},
     {name: 'Beverage', sortOrder: 50},
-    {name: 'Personal', sortOrder: 50},
+    {name: 'Personal', sortOrder: 60},
   ]);
 
   await Item.deleteMany({});
